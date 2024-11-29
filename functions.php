@@ -1,6 +1,5 @@
 <?php
 
-
 add_action( 'wp_enqueue_scripts', 'twentytwentyfour_child_scripts' );
 function twentytwentyfour_child_scripts() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );

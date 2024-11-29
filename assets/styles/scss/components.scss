@@ -1,10 +1,15 @@
 @import './variables.scss';
 
+// .hero-wrapper {
+// background-color: $primary;
 .featured-section {
   display: grid;
-  grid-template-columns: 100%;
   background-color: $primary;
-
+  width: calc(100% + var(--root-padding-left) + var(--root-padding-right));
+  max-width: unset;
+  margin-left: calc(-1 * var(--root-padding-left));
+  margin-right: calc(-1 * var(--root-padding-right));
+  max-height: 100%;
   @media (min-width: 768px) {
     grid-template-columns: 60% 40%; // Mobile-first: stack content vertically
   }
@@ -12,6 +17,7 @@
   .featured-image {
     display: flex;
     flex-direction: column;
+    max-height: inherit;
     img {
       width: 100%; // Ensures the image takes up the full width of its container
       height: 100%; // Ensures the image takes up the full height of its container
@@ -36,6 +42,7 @@
     border-radius: 8px; // Optional: to give the content block rounded corners
     margin-top: 1rem;
     h1,
+    p,
     h5 {
       color: white;
     }
@@ -50,9 +57,25 @@
         display: block;
         width: 50px;
         height: 2px;
-        background-color: #f6c251; // Accent color for underline
+        background-color: $primary; // Accent color for underline
         margin: 0.5rem auto;
       }
     }
   }
 }
+
+.page-block-1 {
+  padding: $space-inset-5;
+  .text-content {
+    p,
+    div,
+    h5 {
+      margin: $space-stack-3;
+    }
+    h2 {
+      margin: $space-stack-4;
+    }
+  }
+}
+
+// }

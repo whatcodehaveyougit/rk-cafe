@@ -1,6 +1,6 @@
 <div class="featured-section">
   <div class="featured-image">
-    <img src="http://localhost:10033/wp-content/uploads/2024/11/Screenshot-2024-11-27-at-09.36.04.png"
+    <img src="http://localhost:10033/wp-content/uploads/2024/11/Screenshot-2024-11-29-at-14.12.06.png"
       alt="A cup of coffee with latte art" />
     <div>
       <span>Monday to Friday <?php echo esc_html($monday_to_friday_hours); ?></span>

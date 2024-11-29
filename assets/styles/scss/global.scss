@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.wp-block-spacer {
+  width: 30%;
+  background-color: $primary;
+}
+
+p {
+  color: $dark-grey;
+}
