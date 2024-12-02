@@ -1,10 +1,12 @@
 $medium-grey: #626262;
 $background-grey: #f2f0e5;
 $dark-grey: #838383;
-$primary: #004eaa;
+$primary: #315167;
 $hover-grey: rgba(35, 90, 108, 0.12);
 $white: #ffffff;
 $black: #000000;
+
+$large-body-text: 1.5rem;
 
 :root {
   --root-padding-left: 24px;
@@ -45,6 +47,13 @@ $space-stack-3: 0 0 16px 0;
 $space-stack-4: 0 0 32px 0;
 $space-stack-5: 0 0 64px 0;
 
+$vertical-space-default: 16px 0 16px 0;
+$vertical-space-1: 4px 0 4px 0;
+$vertical-space-2: 8px 0 8px 0;
+$vertical-space-3: 16px 0 16px 0;
+$vertical-space-4: 32px 0 32px 0;
+$vertical-space-5: 64px 0 64px 0;
+
 $space-default: 16px;
 $space-1: 4px;
 $space-2: 8px;
@@ -62,13 +71,10 @@ $space-5: 64px;
 //   @include theme;
 // }
 
-// @mixin name {
-//   // properties;
-// }
-
-// div {
-//   @include name;
-// }
+@mixin hoverState {
+  text-decoration: underline;
+  cursor: hover;
+}
 
 // @mixin circle($width, $height, $color) {
 //   width: $width;

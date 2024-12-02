@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+.menu-container {
+  margin: $vertical-space-5;
+  h2 {
+    margin: $space-3;
+  }
+  .menu-component {
+    background-color: $background-grey;
+    border: 4px solid $black;
+    padding: $space-inset-4;
+    margin-bottom: $space-5;
+    p {
+      color: $black;
+    }
+    h4 {
+      margin: $space-stack-3;
+    }
+    .wp-block-spacer {
+      background-color: transparent;
+      height: 32px;
+    }
+    > .wp-block-group {
+      margin: $space-stack-3;
+
+      p:nth-child(2) {
+        font-weight: 900;
+      }
+    }
+  }
+}

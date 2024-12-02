@@ -17,7 +17,7 @@
 			],
 			"palette": [
 				{
-					"color": "#004eaa",
+					"color": "#315167",
 					"name": "Primary",
 					"slug": "primary"
 				},
@@ -35,6 +35,16 @@
 					"color": "#ffffff",
 					"name": "White",
 					"slug": "white"
+				},
+				{
+					"color": "#F7ECD8",
+					"name": "Background Cream",
+					"slug": "backgroundCream"
+				},
+				{
+					"color": "#F2F0E5",
+					"name": "Background Grey",
+					"slug": "backgroundGrey"
 				}
 			]
 		},

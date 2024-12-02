@@ -2,7 +2,9 @@
 
 .wp-block-spacer {
   width: 30%;
+  max-width: 100px;
   background-color: $primary;
+  height: 8px;
 }
 
 p {

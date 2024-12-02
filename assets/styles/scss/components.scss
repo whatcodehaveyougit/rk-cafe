@@ -1,8 +1,6 @@
 @import './variables.scss';
 
-// .hero-wrapper {
-// background-color: $primary;
-.featured-section {
+.hero-component {
   display: grid;
   background-color: $primary;
   width: calc(100% + var(--root-padding-left) + var(--root-padding-right));
@@ -13,11 +11,26 @@
   @media (min-width: 768px) {
     grid-template-columns: 60% 40%; // Mobile-first: stack content vertically
   }
+  .wp-block-spacer {
+    background-color: $white;
+  }
 
-  .featured-image {
+  .hero-image {
     display: flex;
     flex-direction: column;
     max-height: inherit;
+    b {
+      margin-right: 12px;
+    }
+    span {
+      b {
+        font-size: $large-body-text;
+      }
+      span {
+        font-size: $large-body-text;
+        color: $primary;
+      }
+    }
     img {
       width: 100%; // Ensures the image takes up the full width of its container
       height: 100%; // Ensures the image takes up the full height of its container
@@ -32,10 +45,10 @@
     }
   }
 
-  .featured-content {
+  .hero-content {
     background-color: $primary;
     color: #fff;
-    padding: 1.5rem;
+    padding: $space-inset-3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +58,12 @@
     p,
     h5 {
       color: white;
+      a {
+        text-decoration: none;
+      }
+    }
+    h5 a:hover {
+      @include hoverState;
     }
     @media (min-width: 768px) {
       margin-top: 0;
@@ -64,7 +83,16 @@
   }
 }
 
-.page-block-1 {
+.buy-gift-component {
+  padding: $space-inset-5;
+  h2,
+  p {
+    margin: $space-stack-3;
+  }
+}
+
+// contained-2-col-component Rename to something like this?
+.block-1-component {
   padding: $space-inset-5;
   .text-content {
     p,
@@ -78,4 +106,66 @@
   }
 }
 
-// }
+.featured-images-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (min-width: 782px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.bookings-component {
+  .wp-block-group {
+    > * {
+      margin: $space-stack-3;
+    }
+    > h2 {
+      margin: $space-stack-2;
+    }
+    .wp-block-spacer {
+      background-color: $white;
+    }
+  }
+}
+
+.footer-container {
+  p {
+    color: $white;
+  }
+  .wp-block-columns {
+    padding: $space-inset-4;
+  }
+  .wp-block-columns:first-child {
+    border-bottom: 1px solid $white;
+    .wp-block-column:nth-child(2) {
+      > * {
+        margin-left: 50%;
+      }
+    }
+  }
+}
+
+.page-h1-component {
+  padding: $space-inset-4;
+  p {
+    color: $white;
+    font-size: $large-body-text;
+  }
+  > * {
+    margin: $space-stack-3;
+  }
+}
+
+.full-component {
+  padding: $space-inset-5;
+  > * {
+    margin: $space-stack-3;
+  }
+}
+
+.contained-2-col-component {
+  padding: $space-inset-5;
+  .wp-block-columns {
+    margin: $space-stack-5;
+  }
+}
