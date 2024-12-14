@@ -1,12 +1,36 @@
 @import './variables.scss';
 
+header {
+  background-color: $background-grey;
+  padding: $space-inset-3;
+  > .wp-block-group {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    > .alignwide > .wp-block-group {
+      max-width: 70%;
+    }
+  }
+  .wp-block-navigation-item__content {
+    font-family: 'Libre Baskerville';
+  }
+  // .wp-block-image img {
+  //   max-width: 70%;
+  // }
+}
+
+body {
+  > .wp-site-blocks {
+    width: calc(100% + var(--root-padding-left) + var(--root-padding-right));
+    max-width: unset;
+    margin-left: calc(-1 * var(--root-padding-left));
+    margin-right: calc(-1 * var(--root-padding-right));
+  }
+}
+
 .hero-component {
   display: grid;
   background-color: $primary;
-  width: calc(100% + var(--root-padding-left) + var(--root-padding-right));
-  max-width: unset;
-  margin-left: calc(-1 * var(--root-padding-left));
-  margin-right: calc(-1 * var(--root-padding-right));
+  min-width: 100%;
   max-height: 100%;
   @media (min-width: 768px) {
     grid-template-columns: 60% 40%; // Mobile-first: stack content vertically
@@ -23,11 +47,12 @@
       margin-right: 12px;
     }
     span {
+      letter-spacing: 1px;
       b {
-        font-size: $large-body-text;
+        font-size: 18px;
       }
       span {
-        font-size: $large-body-text;
+        font-size: 18px;
         color: $primary;
       }
     }
@@ -129,17 +154,45 @@
 }
 
 .footer-container {
+  img {
+    margin-bottom: $space-2;
+  }
+  text-align: center;
+  .wp-block-column:nth-child(2) {
+    .wp-block-group {
+      justify-content: center;
+      align-items: center !important;
+    }
+  }
+  .wp-block-column:nth-child(2) {
+    .wp-block-group:first-child {
+      > * {
+        margin-right: $space-2;
+      }
+      margin-top: $space-2;
+      margin-bottom: $space-4;
+    }
+  }
   p {
     color: $white;
   }
   .wp-block-columns {
     padding: $space-inset-4;
   }
-  .wp-block-columns:first-child {
-    border-bottom: 1px solid $white;
+  @media (min-width: 767px) {
+    text-align: left;
     .wp-block-column:nth-child(2) {
-      > * {
-        margin-left: 50%;
+      .wp-block-group {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    .wp-block-columns:first-child {
+      border-bottom: 1px solid $white;
+      .wp-block-column:nth-child(2) {
+        > * {
+          margin-left: 50%;
+        }
       }
     }
   }
