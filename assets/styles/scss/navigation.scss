@@ -1,21 +1,5 @@
 @import './variables.scss';
 
-// nav.red-navigation-mobile {
-//   display: block;
-// }
-// nav.red-navigation-desktop {
-//   display: none;
-// }
-
-// @media (min-width: 767px) {
-//   nav.red-navigation-mobile {
-//     display: none;
-//   }
-//   nav.red-navigation-desktop {
-//     display: block;
-//   }
-// }
-
 header {
   .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
     margin-left: 0px !important;
@@ -49,6 +33,7 @@ header {
 
   .close-btn {
     border: none;
+    outline: none;
   }
 
   .red-navigation-desktop {
@@ -127,7 +112,7 @@ header {
     &.has-modal-open {
       // width: 50vw;
       background-color: $background-grey;
-      height: 62%;
+      height: 100%;
       overflow-x: hidden;
     }
 
@@ -163,11 +148,12 @@ header {
 
     ul.wp-block-navigation__container {
       > li > a.wp-block-navigation-item__content {
-        font-size: 32px !important;
+        font-size: 1.5rem !important;
+        font-family: $heading-font;
       }
 
       > li.wp-block-navigation-item > a > span.wp-block-navigation-item__label {
-        font-size: 32px;
+        font-size: 1.5rem;
       }
     }
   }
@@ -184,8 +170,7 @@ header {
 ul.wp-block-navigation__submenu-container {
   li.wp-block-navigation-item {
     .wp-block-navigation-item__label {
-      text-transform: uppercase;
-      font-family: 'Inter';
+      font-family: $heading-font;
     }
   }
 }
