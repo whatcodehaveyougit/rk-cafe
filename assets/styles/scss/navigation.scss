@@ -85,10 +85,7 @@ header {
   }
 
   .wp-block-navigation .wp-block-navigation-item__label {
-    font-family: 'Open Sans';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
+    font-family: $heading-font;
     line-height: normal;
   }
 }

@@ -3,9 +3,9 @@ $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https:
 $host = $_SERVER['HTTP_HOST'];
 ?>
 
-<div class="hero-component">
+<div class="hero-component alignfull">
   <div class="hero-image">
-    <img src="http://localhost:10033/wp-content/uploads/2024/11/Screenshot-2024-11-29-at-14.12.06.png"
+    <img src="https://test-yoursite.com/wp-content/uploads/2024/11/Screenshot-2024-11-27-at-09.36.04.png"
       alt="A cup of coffee with latte art" />
     <div>
       <span><b>Monday to Friday</b><span><?php echo esc_html($monday_to_friday_hours); ?></span></span>

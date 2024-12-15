@@ -1,5 +1,7 @@
 $medium-grey: #626262;
 $background-grey: #f2f0e5;
+$heading-font: 'Libre Baskerville';
+$body-font: 'Open Sans';
 $dark-grey: #838383;
 $primary: #315167;
 $hover-grey: rgba(35, 90, 108, 0.12);
@@ -50,7 +52,7 @@ $space-stack-5: 0 0 64px 0;
 $vertical-space-default: 16px 0 16px 0;
 $vertical-space-1: 4px 0 4px 0;
 $vertical-space-2: 8px 0 8px 0;
-$vertical-space-3: 16px 0 16px 0;
+$vertical-space-3: 16px auto 16px auto;
 $vertical-space-4: 32px 0 32px 0;
 $vertical-space-5: 64px 0 64px 0;
 
