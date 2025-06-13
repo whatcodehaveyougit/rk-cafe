@@ -1,7 +1,9 @@
 @import '../variables.scss';
 
 .menu-container {
-  margin: $vertical-space-5;
+  margin-top: $space-5;
+  margin-bottom: $space-5;
+
   h2 {
     margin: $space-3;
   }

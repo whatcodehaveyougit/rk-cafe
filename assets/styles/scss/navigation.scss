@@ -1,0 +1,194 @@
+@import './variables.scss';
+
+header {
+  .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .mobile-menu-top-bar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    padding: 16px 16px 0 16px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content {
+    padding-top: 0px;
+  }
+
+  .has-modal-open .wp-block-navigation__responsive-dialog {
+    margin-top: 0px !important;
+  }
+
+  .wp-block-navigation__responsive-container-close {
+    display: none;
+  }
+
+  .close-btn {
+    border: none;
+    outline: none;
+  }
+
+  .red-navigation-desktop {
+    display: none;
+  }
+
+  @media (min-width: 782px) {
+    .red-navigation-desktop {
+      display: flex;
+    }
+    .red-navigation-mobile {
+      display: none;
+    }
+  }
+
+  .header-row-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .wp-block-navigation__container {
+    gap: 5px;
+  }
+
+  .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+    flex-wrap: nowrap;
+  }
+
+  .wp-block-navigation .wp-block-navigation-item__label {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .wp-block-navigation .wp-block-navigation-item__label {
+    font-family: $heading-font;
+    line-height: normal;
+  }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Start off-screen */
+  }
+  to {
+    transform: translateY(0); /* Final position */
+  }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(0); /* Final position */
+  }
+  to {
+    transform: translateY(-100%); /* Move off-screen */
+  }
+}
+
+/* Hamburger Mobile Navigation */
+.wp-block-navigation {
+  .wp-block-navigation__responsive-container {
+    transform: translateY(-100%); /* Start off-screen */
+    animation: none; /* No animation initially */
+    transition: transform 0.5s ease; /* Smooth transition fallback */
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open {
+    padding: 0px;
+    background-color: $primary;
+    animation: slideDown 0.5s ease forwards; /* Slide down animation */
+    transform: translateY(0); /* Ensure final position */
+
+    &.has-modal-open {
+      // width: 50vw;
+      background-color: $background-grey;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .wp-block-navigation__responsive-container-content {
+      align-items: center;
+
+      .wp-block-navigation__container {
+        align-items: center;
+      }
+
+      ul {
+        width: 100%;
+        li.wp-block-navigation-item {
+          align-items: center;
+          color: black !important;
+          background-color: $background-grey !important;
+          background: $background-grey !important;
+          width: 100%;
+          padding-bottom: 0.4rem;
+          .wp-block-navigation-item__label {
+            color: black !important;
+          }
+        }
+      }
+    }
+
+    .wp-block-button__link {
+      // width: 200px;
+      // height: 60px;
+      padding: 10px 40px;
+      font-size: 26px;
+    }
+
+    ul.wp-block-navigation__container {
+      > li > a.wp-block-navigation-item__content {
+        font-size: 1.5rem !important;
+        font-family: $heading-font;
+      }
+
+      > li.wp-block-navigation-item > a > span.wp-block-navigation-item__label {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .wp-block-navigation__responsive-container-close {
+    color: $primary;
+    &:focus {
+      outline: 0 !important;
+      outline: none !important;
+    }
+  }
+}
+
+ul.wp-block-navigation__submenu-container {
+  li.wp-block-navigation-item {
+    .wp-block-navigation-item__label {
+      font-family: $heading-font;
+    }
+  }
+}
+
+.wp-block-woocommerce-mini-cart {
+  visibility: visible !important;
+}
+
+@media screen and (min-width: 781px) {
+  ul {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  // .navigation-row-container nav {
+  //   max-width: 65%;
+  // }
+}
