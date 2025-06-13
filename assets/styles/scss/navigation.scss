@@ -105,13 +105,13 @@ header {
 
   .wp-block-navigation__responsive-container.is-menu-open {
     padding: 0px;
-    background-color: $primary;
+    background-color: var(--wp--preset--color--primary);
     animation: slideDown 0.5s ease forwards; /* Slide down animation */
     transform: translateY(0); /* Ensure final position */
 
     &.has-modal-open {
       // width: 50vw;
-      background-color: $background-grey;
+      background-color: var(--wp--preset--color--background-cream);
       height: 100%;
       overflow-x: hidden;
     }
@@ -128,8 +128,8 @@ header {
         li.wp-block-navigation-item {
           align-items: center;
           color: black !important;
-          background-color: $background-grey !important;
-          background: $background-grey !important;
+          background-color: var(--wp--preset--color--background-cream) !important;
+          background: var(--wp--preset--color--background-cream) !important;
           width: 100%;
           padding-bottom: 0.4rem;
           .wp-block-navigation-item__label {
@@ -159,7 +159,7 @@ header {
   }
 
   .wp-block-navigation__responsive-container-close {
-    color: $primary;
+    color: var(--wp--preset--color--primary);
     &:focus {
       outline: 0 !important;
       outline: none !important;

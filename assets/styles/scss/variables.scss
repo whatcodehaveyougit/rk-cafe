@@ -1,12 +1,15 @@
-$medium-grey: #626262;
-$background-grey: #f2f0e5;
-$heading-font: 'Libre Baskerville';
-$body-font: 'Open Sans';
-$dark-grey: #838383;
-$primary: #315167;
-$hover-grey: rgba(35, 90, 108, 0.12);
-$white: #ffffff;
-$black: #000000;
+// Fonts
+$heading-font: 'Libre Baskerville', serif;
+$body-font: 'Open Sans', sans-serif;
+
+// WordPress CSS variable references (quoted so we can use them in var() calls)
+// var(--wp--preset--color--background-cream): '--wp--preset--color--background-cream';
+// var(--wp--preset--color--darkgrey): '--wp--preset--color--darkgrey';
+// var(--wp--preset--color--primary): '--wp--preset--color--primary';
+// var(--wp--preset--color--white): '--wp--preset--color--white';
+// var(--wp--preset--color--primary): '--wp--preset--color--primary'; // Note: double-check if this is intentional
+
+// var(--wp--preset--color--primary)
 
 $large-body-text: 1.5rem;
 

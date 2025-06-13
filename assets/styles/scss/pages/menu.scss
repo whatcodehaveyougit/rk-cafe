@@ -8,12 +8,12 @@
     margin: $space-3;
   }
   .menu-component {
-    background-color: $background-grey;
-    border: 4px solid $black;
+    background-color: var(--wp--preset--color--background-cream);
+    border: 4px solid var(--wp--preset--color--primary);
     padding: $space-inset-4;
     margin-bottom: $space-5;
     p {
-      color: $black;
+      color: var(--wp--preset--color--primary);
     }
     h4 {
       margin: $space-stack-3;
