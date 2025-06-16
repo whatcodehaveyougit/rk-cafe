@@ -4,9 +4,16 @@
   width: 30%;
   max-width: 100px;
   background-color: var(--wp--preset--color--primary);
-  height: 8px;
+  height: $space-2;
 }
 
 p {
   color: var(--wp--preset--color--darkgrey);
+}
+
+a:focus,
+a:active,
+a {
+  outline: none;
+  border: none;
 }

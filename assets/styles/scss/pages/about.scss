@@ -1,0 +1,151 @@
+@import '../variables.scss';
+
+.hero-component {
+  overflow: hidden;
+  display: grid;
+  background-color: var(--wp--preset--color--primary);
+  min-width: 100%;
+  max-height: 100%;
+  @media (min-width: 768px) {
+    grid-template-columns: 60% 40%; // Mobile-first: stack content vertically
+  }
+  .wp-block-spacer {
+    background-color: var(--wp--preset--color--white);
+  }
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+    b {
+      margin-right: 12px;
+    }
+    span {
+      b {
+        font-size: var(--wp--preset--font-size--medium);
+      }
+      span {
+        font-size: var(--wp--preset--font-size--medium);
+        color: var(--wp--preset--color--primary);
+        white-space: nowrap;
+      }
+    }
+    @media (min-width: 786px) {
+      span {
+        letter-spacing: 0px;
+      }
+    }
+    img {
+      width: 100%; // Ensures the image takes up the full width of its container
+      height: 100%; // Ensures the image takes up the full height of its container
+      object-fit: cover; // Ensures the image will cover the space without distorting its aspect ratio
+      object-position: center; //
+    }
+    > div {
+      background-color: var(--wp--preset--color--background-cream);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .hero-content {
+    background-color: var(--wp--preset--color--primary);
+    color: #fff;
+    padding: $space-inset-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: $space-2; // Optional: to give the content block rounded corners
+    margin-top: $space-3;
+    h1,
+    p,
+    h5 {
+      color: white;
+      a {
+        text-decoration: none;
+      }
+    }
+    h5 a:hover {
+      @include hoverState;
+    }
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+
+    .menu-items {
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: var(--wp--preset--color--primary); // Accent color for underline
+        margin: 0.5rem auto;
+      }
+    }
+  }
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-height: 800px !important;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-image > div {
+  position: absolute;
+  z-index: 9000;
+  background: #000;
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.hero-image > div span b {
+  margin-right: $space-2;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .hero-image > div {
+    padding: $space-2;
+    margin-top: 200px;
+  }
+}
+
+.vimeo-crop-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.vimeo-crop-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: none;
+  pointer-events: none;
+}

@@ -2,12 +2,18 @@
 $heading-font: 'Libre Baskerville', serif;
 $body-font: 'Open Sans', sans-serif;
 
+// var(--wp--preset--font-size--small)
+// var(--wp--preset--font-size--medium)
+// var(--wp--preset--font-size--large)
+// var(--wp--preset--font-size--x-large)
+// var(--wp--preset--font-size--xx-large)
+
 // WordPress CSS variable references (quoted so we can use them in var() calls)
-// var(--wp--preset--color--background-cream): '--wp--preset--color--background-cream';
-// var(--wp--preset--color--darkgrey): '--wp--preset--color--darkgrey';
-// var(--wp--preset--color--primary): '--wp--preset--color--primary';
-// var(--wp--preset--color--white): '--wp--preset--color--white';
-// var(--wp--preset--color--primary): '--wp--preset--color--primary'; // Note: double-check if this is intentional
+// var(--wp--preset--color--background-cream):
+// var(--wp--preset--color--darkgrey) was 838383
+// var(--wp--preset--color--primary):
+// var(--wp--preset--color--white):
+// var(--wp--preset--color--primary): // Note: double-check if this is intentional
 
 // var(--wp--preset--color--primary)
 

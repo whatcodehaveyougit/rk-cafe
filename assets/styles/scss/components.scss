@@ -22,122 +22,12 @@ header {
   }
 }
 
-.video-component {
-  margin-bottom: $space-3;
-
-  .wp-block-embed-youtube {
-    max-height: 60vh;
-    overflow: hidden;
-    .wp-embed-responsive .wp-has-aspect-ratio iframe {
-      max-height: 60vh;
-    }
-    .wp-block-embed__wrapper {
-      height: 100%;
-      max-height: 60vh;
-    }
-    // .wp-has-aspect-ratio iframe {
-    //   height: auto;
-    // }
-    // .lazy-load-div {
-    //   height: 100% !important;
-    // }
-    // .preview-lazyload {
-    //   // height: 60vh;
-    //   a {
-    //     height: 100% !important;
-    //   }
-    // }
-  }
-}
-
 body {
   > .wp-site-blocks {
     width: calc(100% + var(--root-padding-left) + var(--root-padding-right));
     max-width: unset;
     margin-left: calc(-1 * var(--root-padding-left));
     margin-right: calc(-1 * var(--root-padding-right));
-  }
-}
-
-.hero-component {
-  display: grid;
-  background-color: var(--wp--preset--color--primary);
-  min-width: 100%;
-  max-height: 100%;
-  @media (min-width: 768px) {
-    grid-template-columns: 60% 40%; // Mobile-first: stack content vertically
-  }
-  .wp-block-spacer {
-    background-color: var(--wp--preset--color--white);
-  }
-
-  .hero-image {
-    display: flex;
-    flex-direction: column;
-    max-height: inherit;
-    b {
-      margin-right: 12px;
-    }
-    span {
-      letter-spacing: 1px;
-      b {
-        font-size: 18px;
-      }
-      span {
-        font-size: 18px;
-        color: var(--wp--preset--color--primary);
-        white-space: nowrap;
-      }
-    }
-    img {
-      width: 100%; // Ensures the image takes up the full width of its container
-      height: 100%; // Ensures the image takes up the full height of its container
-      object-fit: cover; // Ensures the image will cover the space without distorting its aspect ratio
-      object-position: center; //
-    }
-    > div {
-      background-color: var(--wp--preset--color--background-cream);
-      padding: 1rem;
-      display: flex;
-      justify-content: space-around;
-    }
-  }
-
-  .hero-content {
-    background-color: var(--wp--preset--color--primary);
-    color: #fff;
-    padding: $space-inset-3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 8px; // Optional: to give the content block rounded corners
-    margin-top: 1rem;
-    h1,
-    p,
-    h5 {
-      color: white;
-      a {
-        text-decoration: none;
-      }
-    }
-    h5 a:hover {
-      @include hoverState;
-    }
-    @media (min-width: 768px) {
-      margin-top: 0;
-      margin-left: 1rem;
-    }
-
-    .menu-items {
-      &::after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 2px;
-        background-color: var(--wp--preset--color--primary); // Accent color for underline
-        margin: 0.5rem auto;
-      }
-    }
   }
 }
 
@@ -202,9 +92,9 @@ body {
 }
 
 .footer-container {
-  img {
-    margin-bottom: $space-2;
-  }
+  // img {
+  //   margin-bottom: $space-2;
+  // }
   text-align: center;
   .wp-block-column:nth-child(2) {
     .wp-block-group {
@@ -215,7 +105,7 @@ body {
   .wp-block-column:nth-child(2) {
     .wp-block-group:first-child {
       > * {
-        margin-right: $space-2;
+        margin-left: $space-2;
       }
       margin-top: $space-2;
       margin-bottom: $space-4;
@@ -226,6 +116,38 @@ body {
   }
   :where(.wp-block-columns-is-layout-flex) {
     gap: $space-2;
+  }
+  .wp-block-columns {
+    padding: $space-inset-4;
+    p {
+      text-align: center;
+    }
+    @media (min-width: 782px) {
+      .wp-block-column:nth-child(1) {
+        figure {
+          display: flex;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      .wp-block-column:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          text-align: right;
+        }
+      }
+      .wp-block-group {
+        flex-direction: column;
+      }
+      .wp-block-columns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
   }
   .wp-block-column:nth-child(2) {
     .wp-block-group {
@@ -238,9 +160,9 @@ body {
       align-items: center;
     }
     .wp-block-group:first-child {
-      > * {
-        margin-right: $space-2;
-      }
+      // > * {
+      //   margin-left: $space-2;
+      // }
       margin-top: $space-2;
       margin-bottom: $space-4;
     }
@@ -250,51 +172,31 @@ body {
         display: flex;
         justify-content: flex-end;
       }
-      .wp-block-group:nth-child(2) {
-        flex-direction: column;
-        justify-content: right;
-        align-content: flex-end;
-      }
-    }
-  }
-  .wp-block-columns {
-    padding: $space-inset-4;
-    p {
-      text-align: center;
-    }
-    @media (min-width: 782px) {
-      .wp-block-column:nth-child(1) {
-        p {
-          text-align: left;
-        }
-      }
-      .wp-block-column:nth-child(2) {
-        p {
-          text-align: right;
-        }
-      }
-      .wp-block-group {
-        flex-direction: column;
-      }
-    }
-  }
-  @media (min-width: 767px) {
-    text-align: left;
-    .wp-block-column:nth-child(2) {
-      .wp-block-group {
-        display: flex;
-        justify-content: flex-start;
-      }
-    }
-    .wp-block-columns:first-child {
-      border-bottom: 1px solid var(--wp--preset--color--white);
-      .wp-block-column:nth-child(2) {
-        > * {
-          margin-left: 50%;
+      // .wp-block-group:nth-child(2) {
+      //   flex-direction: column;
+      //   justify-content: right;
+      //   align-content: flex-end;
+      // }
+      .wp-block-columns:first-child {
+        border-bottom: 1px solid var(--wp--preset--color--white);
+        .wp-block-column:nth-child(2) {
+          > * {
+            display: flex;
+            justify-content: flex-end;
+          }
         }
       }
     }
   }
+  // @media (min-width: 782px) {
+  //   text-align: left;
+  //   // .wp-block-column:nth-child(2) {
+  //   //   .wp-block-group {
+  //   //     display: flex;
+  //   //     justify-content: flex-start;
+  //   //   }
+  //   // }
+  // }
 }
 
 .page-h1-component {

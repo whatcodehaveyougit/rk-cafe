@@ -14,7 +14,12 @@
     margin-bottom: $space-5;
     p {
       color: var(--wp--preset--color--primary);
+      margin-right: $space-2;
     }
+    p:nth-child(2) {
+      white-space: nowrap;
+    }
+
     h4 {
       margin: $space-stack-3;
     }

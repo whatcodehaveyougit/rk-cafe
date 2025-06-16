@@ -21,6 +21,7 @@ function custom_acf_shortcode($atts = []) {
 	$featured_section_1_title = get_field('featured_section_1_title');
 	$featured_section_1_text = get_field('featured_section_1_text');
 	$monday_to_friday_hours = get_field('monday_to_friday_opening_times');
+	$video_url = get_field('video_url');
 	$sat_and_sun_hours = get_field('saturday_and_sunday_opening_times');
 
 	// Use output buffering to capture the template content
